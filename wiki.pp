@@ -10,6 +10,22 @@ user { fedwiki:
   comment => 'fedwiki runner'
 }
 
+package { github.com/gorilla/mux:
+  provider => go
+}
+
+package { github.com/gorilla/sessions:
+  provider => go
+}
+
+package { code.google.com/p/go.net/html:
+  provider => go
+}
+
+package { github.com/stephen-marshall.moore/openid.go/src/openid:
+  provider => go
+}
+
 vcsrepo { 'smallest':
   ensure => latest,
   path => '/home/fedwiki/smallest',
