@@ -1,0 +1,11 @@
+[Unit]
+Description=Smallest Federated Wiki Server build in Go
+
+[Service]
+User=fedwiki
+Group=gophers
+WorkingDirectory=/home/fedwiki/smallest
+ExecStart=/home/fedwiki/smallest/bin/server
+
+[Install]
+WantedBy=default.target
